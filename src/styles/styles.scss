@@ -1,0 +1,251 @@
+@import url("https://fonts.googleapis.com/css2?family=Oswald&display=swap");
+$font: "Oswald", sans-serif;
+// colors
+$white: #fff;
+$black: #000;
+$off-white: #f2f4f5;
+
+/*Global CSS*/
+* {
+  box-sizing: inherit;
+  transition-property: all;
+  transition-duration: 0.6s;
+  transition-timing-function: ease;
+}
+
+html,
+body {
+  font-family: $font;
+  font-size: 16px;
+  padding: 0;
+  margin: 0;
+  background: red;
+}
+
+.container {
+  width: 1640px;
+  min-width: 1640px;
+  margin: 0 auto;
+  @media (max-width: 1440px) {
+    width: 1280px;
+    min-width: 1280px;
+  }
+  @media (max-width: 1280px) {
+    width: 976px;
+    min-width: 976px;
+  }
+  @media (max-width: 976px) {
+    width: 768px;
+    min-width: 768px;
+  }
+}
+// cat logo
+.cat {
+  width: 90px;
+  height: 55px;
+  background-color: black;
+  position: absolute;
+  border-radius: 250px 250px 120px 120px;
+  left: 5px;
+  top: -30px;
+
+  z-index: 2;
+
+  &:after,
+  &:before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-left: 18px solid transparent;
+    border-right: 18px solid transparent;
+    border-bottom: 25px solid black;
+    top: -10px;
+  }
+  &:after {
+    transform: rotate(-35deg);
+  }
+  &:before {
+    transform: rotate(35deg);
+    right: 0;
+  }
+}
+
+.eyes li {
+  position: absolute;
+  list-style: none;
+  float: left;
+  width: 10px;
+  height: 10px;
+  background-color: 2px black;
+  border: 2px solid yellow;
+  border-radius: 100%;
+
+  &:first-child {
+    right: 21px;
+  }
+  &:nth-child(2) {
+    left: 21px;
+  }
+
+  &:after {
+    content: "";
+    position: absolute;
+    // height: px;
+    // width: 2px;
+    background-color: black;
+    // top: -4px;
+    // left: -2px;
+    transform: rotate(120deg);
+  }
+}
+
+.mouth {
+  position: absolute;
+  left: 40px;
+  top: 28px;
+
+  &:after,
+  &:before {
+    content: "";
+    position: absolute;
+    width: 2px;
+    height: 8px;
+    background-color: white;
+    transform: rotate(235deg);
+  }
+  &:after {
+    transform: rotate(-235deg);
+    right: -8px;
+  }
+}
+
+.whisker1 {
+  position: absolute;
+  left: 80px;
+  top: 28px;
+
+  &:after,
+  &:before {
+    content: "";
+    position: absolute;
+    width: 2px;
+    height: 8px;
+    background-color: white;
+    transform: rotate(260deg);
+  }
+  &:after {
+    transform: rotate(-85deg);
+    right: -3px;
+    bottom: -16px;
+  }
+}
+
+.whisker2 {
+  position: absolute;
+  right: 80px;
+  bottom: 28px;
+
+  &:after,
+  &:before {
+    content: "";
+    position: absolute;
+    width: 2px;
+    height: 8px;
+    background-color: white;
+    transform: rotate(-260deg);
+  }
+  &:after {
+    transform: rotate(85deg);
+    left: -1px;
+    bottom: -16px;
+  }
+}
+
+/* HEADER CSS*/
+header {
+  height: 80px;
+  width: 100%;
+  position: absolute;
+  top: 0px;
+  z-index: 10;
+  .inner-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 80px;
+    .logo {
+      a:link {
+        font-weight: 700;
+        text-decoration: none;
+        letter-spacing: 1.5px;
+        // background: lighten(red, 3%);
+        color: $off-white;
+      }
+    }
+  }
+  .navigation {
+    nav {
+      a:link {
+        margin: 0 20px;
+        text-decoration: none;
+        letter-spacing: 1.75px;
+        text-transform: uppercase;
+        font-size: 0.75rem;
+        color: darken($off-white, 1.5%);
+
+        &:hover {
+          background: rgba($off-white, 0);
+          font-weight: 900;
+          letter-spacing: 1px;
+        }
+        &:last-child {
+          margin-right: 0px;
+        }
+      }
+    }
+  }
+}
+
+/*BANNER CSS*/
+.banner {
+  display: flex;
+  align-items: center;
+  background-color: white;
+  height: 100vh;
+  .row {
+    position: relative;
+    .main-text {
+      font-size: 5.8rem;
+      text-transform: uppercase;
+      font-weight: 700;
+      color: $white;
+      position: absolute;
+      width: 100%;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      text-align: center;
+      mix-blend-mode: difference;
+      z-index: 8;
+      @media (max-width: 1440px) {
+        width: 1280px;
+        min-width: 1280px;
+        font-size: 4.4rem;
+        letter-spacing: 36px;
+      }
+      @media (max-width: 1280px) {
+        width: 976px;
+        min-width: 976px;
+        font-size: 3.3 rem;
+        letter-spacing: 24px;
+      }
+      @media (max-width: 976px) {
+        width: 768px;
+        min-width: 768px;
+        font-size: 2.2rem;
+        letter-spacing: 12px;
+      }
+    }
+  }
+}
