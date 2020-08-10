@@ -1,3 +1,5 @@
+Woah what even is with this read me. I should probably find a way to change how I do my repositories the next time I work with gastby
+
 <!-- AUTO-GENERATED-CONTENT:START (STARTER) -->
 <p align="center">
   <a href="https://www.gatsbyjs.org">
