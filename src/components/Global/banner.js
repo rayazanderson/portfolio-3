@@ -1,6 +1,7 @@
 import React from "react"
 import Img from "gatsby-image/withIEPolyfill"
 import { useStaticQuery, graphql } from "gatsby"
+
 const Banner = () => {
   const data = useStaticQuery(graphql`
     query {
@@ -47,6 +48,7 @@ const Banner = () => {
           <div className="rain-drop"></div>
         </div>
       </div>
+      <div className="other-stuff"></div>
     </div>
   )
 }

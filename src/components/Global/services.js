@@ -2,12 +2,12 @@ import React from "react"
 import Img from "gatsby-image/withIEPolyfill"
 import { useStaticQuery, graphql } from "gatsby"
 
-const Footer = () => {
+const Services = () => {
   return (
-    <div className="footer" id="footer">
+    <div className="services-banner" id="services">
       <p> hello</p>
     </div>
   )
 }
 
-export default Footer
+export default Services
