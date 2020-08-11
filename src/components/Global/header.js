@@ -9,7 +9,7 @@ const Header = () => (
     <div className="container">
       <div className="inner-header">
         <div className="logo">
-          <Link to="/" activeStyle={{ color: "#f2f4f5" }}>
+          <Link to="/" activeStyle={{ color: "black" }}>
             HOME
           </Link>
         </div>

@@ -19,7 +19,7 @@ body {
   font-size: 16px;
   padding: 0;
   margin: 0;
-  background: red;
+  background: $off-white;
 }
 
 .container {
@@ -192,10 +192,10 @@ header {
         letter-spacing: 1.75px;
         text-transform: uppercase;
         font-size: 0.75rem;
-        color: darken($off-white, 1.5%);
+        color: black;
 
         &:hover {
-          background: rgba($off-white, 0);
+          mix-blend-mode: difference;
           font-weight: 900;
           letter-spacing: 1px;
         }
@@ -211,13 +211,14 @@ header {
 .banner {
   display: flex;
   align-items: center;
-  background-color: black;
+  background-color: white;
   height: 100vh;
   .row {
     position: relative;
     .main-text {
       font-size: 5.8rem;
       text-transform: uppercase;
+      letter-spacing: 42px;
       font-weight: 700;
       color: $white;
       position: absolute;
@@ -247,6 +248,25 @@ header {
         letter-spacing: 12px;
       }
     }
+    .banner-image {
+      width: 100%;
+      height: 100vh;
+      margin: 0 auto;
+      position: relative;
+      margin-left: -58px;
+      @media (max-width: 1440px) {
+        width: 1440px;
+        min-width: 1440px;
+      }
+      @media (max-width: 1280px) {
+        width: 1280px;
+        min-width: 1280px;
+      }
+      @media (max-width: 976px) {
+        width: 976px;
+        min-width: 976px;
+      }
+    }
   }
   /*css style part 1*/
   .rain-drop {
@@ -254,7 +274,7 @@ header {
     top: -100px;
     width: 1px;
     height: 100px;
-    background-image: linear-gradient(to bottom, #bdedff, #c2dfff);
+    background-image: linear-gradient(to bottom, #38acec, #bdedff);
   }
   .rain-drop:nth-child(2) {
     left: 10%;
