@@ -210,6 +210,7 @@ header {
 /*BANNER CSS*/
 .banner {
   display: flex;
+
   align-items: center;
   background-color: white;
   // height: 90vh;
@@ -343,4 +344,95 @@ header {
       top: 100vh;
     }
   }
+  .fixed-scroll {
+    font-weight: 700;
+    font-size: 0.85rem;
+    letter-spacing: 1.5px;
+    color: $black;
+    margin-left: 48px;
+    text-transform: uppercase;
+    position: absolute;
+    bottom: 28px;
+  }
+  // add a scroll function to make the down-arrow to pulse a shade
 }
+
+/*About me */
+
+.about-banner {
+  padding: 48px 0;
+  background: $white;
+  position: relative;
+  .inner-about {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .content {
+      width: 33%;
+      @media (max-width: 1440px) {
+        width: 40%;
+      }
+      h3 {
+        font-weight: 700;
+        text-transform: uppercase;
+        font-size: 1.8rem;
+        letter-spacing: 1.5px;
+        margin: 0;
+      }
+      p {
+        font-size: 1rem;
+        line-height: 2rem;
+        font-weight: 300;
+        margin: 40px 0 72px;
+      }
+    }
+  }
+}
+
+/* Services CSS*/
+.services-banner {
+  padding: 48px 0;
+  background: $white;
+  position: relative;
+  .inner-services {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .content {
+      width: 100%;
+      @media (max-width: 1440px) {
+        width: 100%;
+      }
+      @media (max-width: 1280px) {
+        width: 75%;
+      }
+      @media (max-width: 976px) {
+        width: 50%;
+      }
+      h2 {
+        font-weight: 700;
+        text-transform: uppercase;
+        font-size: 2.8rem;
+        letter-spacing: 1.5px;
+        margin: 0;
+        text-align: center;
+      }
+      h3 {
+        font-weight: 700;
+        text-transform: uppercase;
+        font-size: 1.8rem;
+        letter-spacing: 1.5px;
+        margin: 0;
+      }
+      p {
+        font-size: 1rem;
+        line-height: 2rem;
+        font-weight: 300;
+        margin: 40px 0 72px;
+      }
+    }
+  }
+}
+/* Portfolio CSS*/
+/* Expereince CSS*/
+/* Contact CSS*/
