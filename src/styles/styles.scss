@@ -344,6 +344,7 @@ header {
       top: 100vh;
     }
   }
+
   .fixed-scroll {
     font-weight: 700;
     font-size: 0.85rem;
@@ -353,6 +354,12 @@ header {
     text-transform: uppercase;
     position: absolute;
     bottom: 28px;
+    &:hover {
+      border-radius: 30%;
+      border-color: black;
+      opacity: 0.6;
+      mix-blend-mode: difference;
+    }
   }
   // add a scroll function to make the down-arrow to pulse a shade
 }
@@ -360,9 +367,11 @@ header {
 /*About me */
 
 .about-banner {
-  padding: 48px 0;
+  padding: 58px 0;
   background: $white;
   position: relative;
+  border-radius: 10px;
+  border: solid black;
   .inner-about {
     display: flex;
     justify-content: space-between;
@@ -383,7 +392,58 @@ header {
         font-size: 1rem;
         line-height: 2rem;
         font-weight: 300;
-        margin: 40px 0 72px;
+        margin: 30px 0 62px;
+      }
+      .btn-row {
+        a {
+          font-weight: 700;
+          font-size: 0.875rem;
+          letter-spacing: 1.5px;
+          color: $black;
+          text-transform: uppercase;
+          text-decoration: none;
+        }
+      }
+    }
+    .about-image {
+      width: 50%;
+      height: 1000px;
+      position: relative;
+      z-index: 7;
+      border-style: solid;
+      border-color: pink;
+      // top: -365px;
+      // right: -600px;
+      @media (max-width: 1440px) {
+        height: 800px;
+      }
+      .top-right {
+        position: absolute;
+        width: 800px;
+        top: 250px;
+        right: 50;
+        z-index: 4;
+        @media (max-width: 1440px) {
+          width: 460px;
+        }
+      }
+      .black-box {
+        background: $black;
+        height: 418px;
+        width: 836px;
+        position: absolute;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        @media (max-width: 1440px) {
+          width: 636px;
+          height: 340px;
+        }
+        &.overlay {
+          z-index: 7;
+          // background: $maroon;
+          mix-blend-mode: overlay;
+        }
       }
     }
   }
@@ -398,7 +458,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    .content {
+    .services-content {
       width: 100%;
       @media (max-width: 1440px) {
         width: 100%;
@@ -408,6 +468,20 @@ header {
       }
       @media (max-width: 976px) {
         width: 50%;
+      }
+      .my-services {
+        margin-top: 10rem;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+        grid-gap: 2.5rem;
+        text-align: center;
+      }
+      .services {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 2rem;
       }
       h2 {
         font-weight: 700;

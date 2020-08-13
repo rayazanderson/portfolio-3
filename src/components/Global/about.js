@@ -3,17 +3,17 @@ import Img from "gatsby-image/withIEPolyfill"
 import { useStaticQuery, graphql } from "gatsby"
 
 const About = () => {
-  //     const data = useStaticQuery(graphql`
-  //     query {
-  //       leaf: file(relativePath: { eq: "leaf.png" }) {
-  //         childImageSharp {
-  //           fluid(maxWidth: 1000, quality: 100) {
-  //             ...GatsbyImageSharpFluid
-  //           }
-  //         }
-  //       }
-  //     }
-  //   `)
+  const data = useStaticQuery(graphql`
+    query {
+      bb: file(relativePath: { eq: "baobei.png" }) {
+        childImageSharp {
+          fluid(maxWidth: 1000, quality: 100) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+    }
+  `)
   return (
     <div className="about-banner" id="about">
       <div className="container">
@@ -35,8 +35,16 @@ const About = () => {
               a team that values quality, innovation, and creativity.
             </p>
           </div>
+          <div className="about-image">
+            <div className="top-right">
+              <Img fluid={data.bb.childImageSharp.fluid} alt="" />
+            </div>
+          </div>
         </div>
       </div>
+
+      <div className="black-box"></div>
+      <div className="box-box overlay"></div>
     </div>
   )
 }

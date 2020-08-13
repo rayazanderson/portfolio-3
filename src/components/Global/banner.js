@@ -48,7 +48,7 @@ const Banner = () => {
           <div className="rain-drop"></div>
         </div>
       </div>
-      <div className="fixed-scroll">See More</div>
+      <div className="fixed-scroll">Scroll down</div>
     </div>
   )
 }
