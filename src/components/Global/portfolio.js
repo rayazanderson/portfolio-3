@@ -5,7 +5,13 @@ import { useStaticQuery, graphql } from "gatsby"
 const Portfolio = () => {
   return (
     <div className="portfolio-banner" id="portfolio">
-      <p> hello</p>
+      <div className="container">
+        <div className="inner-portfolio">
+          <div className="content">
+            <p> hello</p>
+          </div>
+        </div>
+      </div>
     </div>
   )
 }

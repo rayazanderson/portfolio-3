@@ -42,7 +42,7 @@ const About = () => {
           </div>
         </div>
       </div>
-
+      <div className="lined-box"></div>
       <div className="black-box"></div>
       <div className="box-box overlay"></div>
     </div>

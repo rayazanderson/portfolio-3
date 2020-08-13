@@ -242,9 +242,9 @@ header {
         font-size: 3.3 rem;
         letter-spacing: 24px;
       }
-      @media (max-width: 976px) {
-        width: 768px;
-        min-width: 768px;
+      @media (max-width: 600px) {
+        width: 600px;
+        min-width: 600px;
         font-size: 2.2rem;
         letter-spacing: 12px;
       }
@@ -257,15 +257,12 @@ header {
       margin-left: -58px;
       @media (max-width: 1440px) {
         width: 1440px;
-        min-width: 1440px;
       }
       @media (max-width: 1280px) {
         width: 1280px;
-        min-width: 1280px;
       }
-      @media (max-width: 976px) {
-        width: 976px;
-        min-width: 976px;
+      @media (max-width: 600px) {
+        width: 600px;
       }
     }
   }
@@ -367,7 +364,7 @@ header {
 /*About me */
 
 .about-banner {
-  padding: 58px 0;
+  padding: 48px 0;
   background: $white;
   position: relative;
   border-radius: 10px;
@@ -380,6 +377,15 @@ header {
       width: 33%;
       @media (max-width: 1440px) {
         width: 40%;
+        margin-left: 1rem;
+      }
+      @media (max-width: 1280px) {
+        width: 40%;
+        margin-left: 1rem;
+      }
+      @media (max-width: 976px) {
+        width: 40%;
+        margin-left: 1rem;
       }
       h3 {
         font-weight: 700;
@@ -410,41 +416,101 @@ header {
       height: 1000px;
       position: relative;
       z-index: 7;
-      border-style: solid;
-      border-color: pink;
+      // background: pink;
       // top: -365px;
       // right: -600px;
       @media (max-width: 1440px) {
         height: 800px;
       }
+      @media (max-width: 1280px) {
+        height: 600px;
+      }
+      @media (max-width: 976px) {
+        height: 400px;
+        right: 200px;
+        top: -255px;
+      }
       .top-right {
         position: absolute;
         width: 800px;
         top: 250px;
-        right: 50;
+        right: 17%;
         z-index: 4;
         @media (max-width: 1440px) {
-          width: 460px;
+          position: absolute;
+          width: 500px;
+        }
+        @media (max-width: 1280px) {
+          position: absolute;
+          width: 350px;
+          top: 30%;
+        }
+        @media (max-width: 976px) {
+          position: absolute;
+          width: 200px;
         }
       }
-      .black-box {
-        background: $black;
-        height: 418px;
-        width: 836px;
-        position: absolute;
-        right: 0;
-        top: 50%;
-        transform: translateY(-50%);
-        @media (max-width: 1440px) {
-          width: 636px;
-          height: 340px;
-        }
-        &.overlay {
-          z-index: 7;
-          // background: $maroon;
-          mix-blend-mode: overlay;
-        }
-      }
+    }
+  }
+  .lined-box {
+    border-style: dashed;
+    border-width: medium;
+    border-color: #667c26;
+    height: 438px;
+    width: 636px;
+    position: absolute;
+    right: 13%;
+    margin-right: 3rem;
+    top: 45%;
+    transform: translateY(-50%);
+    @media (max-width: 1440px) {
+      width: 538px;
+      height: 330px;
+    }
+    @media (max-width: 1280px) {
+      width: 338px;
+      height: 230px;
+    }
+    @media (max-width: 976px) {
+      width: 338px;
+      height: 100px;
+      top: 10%;
+      right: -5%;
+    }
+    &.overlay {
+      z-index: 7;
+      // background: $maroon;
+      mix-blend-mode: overlay;
+    }
+  }
+
+  .black-box {
+    background-image: linear-gradient(to bottom right, #617c58, #347235);
+    height: 438px;
+    width: 636px;
+    position: absolute;
+    right: 0;
+    margin-right: 3rem;
+    top: 59%;
+    transform: translateY(-50%);
+    @media (max-width: 1440px) {
+      width: 538px;
+      height: 330px;
+    }
+    @media (max-width: 1280px) {
+      width: 338px;
+      height: 230px;
+    }
+    @media (max-width: 976px) {
+      width: 130px;
+      height: 338px;
+      top: 30%;
+      right: -7%;
+    }
+    &.overlay {
+      z-index: 7;
+      // background: $maroon;
+      mix-blend-mode: overlay;
     }
   }
 }
@@ -465,9 +531,11 @@ header {
       }
       @media (max-width: 1280px) {
         width: 75%;
+        margin-left: 2rem;
       }
       @media (max-width: 976px) {
         width: 50%;
+        margin-left: 1rem;
       }
       .my-services {
         margin-top: 10rem;
