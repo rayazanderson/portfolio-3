@@ -1,6 +1,7 @@
 import React from "react"
-import Img from "gatsby-image/withIEPolyfill"
-import { useStaticQuery, graphql } from "gatsby"
+// import Img from "gatsby-image/withIEPolyfill"
+// import { useStaticQuery, graphql } from "gatsby"
+// import Backend from "../../assets/videos/backend-logo"
 
 const Services = () => {
   return (
@@ -13,55 +14,33 @@ const Services = () => {
               <div className="services">
                 <h3>Frontend Development</h3>
                 <p>
-                  Hello! My name is Raya Anderson and I am a software engineer
-                  with a strong passion for learning, creativity, and the desire
-                  to achieve greater personal programming acumen. I graduated
-                  from a coding boot camp and am attaining ever-increasing
-                  technical capability acquired through studying, collaborative
-                  efforts with colleagues, peers, and friends at game jams, and
-                  hackathons. I enjoy learning and my curiosity led me to attend
-                  a coding bootcamp, coding meet-ups, and I won a Hackathon. I
-                  learned new skills like Three.js, Vue, and Gatsby! Along with
-                  learning cool, new stuff, I've sharpened existing skills.
-                  Given my skill-set and passion for software engineering I
-                  believe I will be a benefit to a team that values quality,
-                  innovation, and creativity.
+                  I can be responsible visuals that help users interact with the
+                  backend features by building interfaces using Javascript,
+                  HTML, and CSS. The frameworks I'm most experienced in building
+                  is with React.js and the frameworks that can work with React
+                  as well, such as Vue, Next, and of course, Gatsby! I've also
+                  utilized other tools such as testing and debugging features
+                  using test-driven development, and utilize third-party
+                  libraries that are important to the visual appeal of the site
+                  in order to maintain and develop responsive visuals for
+                  desktop and mobile devices.
                 </p>
               </div>
               <div className="services">
                 <h3>Backend Development</h3>
+                {/* <video controls>
+                  <source src={Backend} type="video/mp4" />
+                </video> */}
                 <p>
-                  Hello! My name is Raya Anderson and I am a software engineer
-                  with a strong passion for learning, creativity, and the desire
-                  to achieve greater personal programming acumen. I graduated
-                  from a coding boot camp and am attaining ever-increasing
-                  technical capability acquired through studying, collaborative
-                  efforts with colleagues, peers, and friends at game jams, and
-                  hackathons. I enjoy learning and my curiosity led me to attend
-                  a coding bootcamp, coding meet-ups, and I won a Hackathon. I
-                  learned new skills like Three.js, Vue, and Gatsby! Along with
-                  learning cool, new stuff, I've sharpened existing skills.
-                  Given my skill-set and passion for software engineering I
-                  believe I will be a benefit to a team that values quality,
-                  innovation, and creativity.
-                </p>
-              </div>
-              <div className="services">
-                <h3>Web Development</h3>
-                <p>
-                  Hello! My name is Raya Anderson and I am a software engineer
-                  with a strong passion for learning, creativity, and the desire
-                  to achieve greater personal programming acumen. I graduated
-                  from a coding boot camp and am attaining ever-increasing
-                  technical capability acquired through studying, collaborative
-                  efforts with colleagues, peers, and friends at game jams, and
-                  hackathons. I enjoy learning and my curiosity led me to attend
-                  a coding bootcamp, coding meet-ups, and I won a Hackathon. I
-                  learned new skills like Three.js, Vue, and Gatsby! Along with
-                  learning cool, new stuff, I've sharpened existing skills.
-                  Given my skill-set and passion for software engineering I
-                  believe I will be a benefit to a team that values quality,
-                  innovation, and creativity.
+                  I can also implement and maintain the databases, servers, and
+                  other applications such as APIs that help power the software.
+                  I've built databases with a variety of SQL and NoSQL. As well
+                  as integrating other databases using AWS and Firebase to store
+                  media data. I've also utilize jQuery and GraphQL in order for
+                  the applications to communicate with not only with each other,
+                  but through third-party sites as well. I've managed to
+                  maintain these such features using OOP langauges such as
+                  Javascript with Node + Express, Ruby on Rails, and Django.
                 </p>
               </div>
             </div>

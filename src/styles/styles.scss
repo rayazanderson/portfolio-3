@@ -26,17 +26,18 @@ body {
   width: 1640px;
   min-width: 1640px;
   margin: 0 auto;
+
   @media (max-width: 1440px) {
     width: 1280px;
     min-width: 1280px;
   }
   @media (max-width: 1280px) {
-    width: 976px;
-    min-width: 976px;
+    width: 900px;
+    min-width: 900px;
   }
-  @media (max-width: 976px) {
-    width: 768px;
-    min-width: 768px;
+  @media (max-width: 900px) {
+    width: 700px;
+    min-width: 700px;
   }
 }
 // cat logo
@@ -210,12 +211,21 @@ header {
 /*BANNER CSS*/
 .banner {
   display: flex;
-
+  flex-wrap: wrap;
   align-items: center;
-  background-color: white;
+  background-color: linear-gradient(
+    to left,
+    #f0f0f0,
+    #f1f1f1,
+    #f2f2f2,
+    #ededed,
+    #ebebeb,
+    #e3e3e3
+  );
   // height: 90vh;
   .row {
     position: relative;
+    flex-wrap: wrap;
     .main-text {
       font-size: 5.8rem;
       text-transform: uppercase;
@@ -224,28 +234,30 @@ header {
       color: $white;
       position: absolute;
       width: 100%;
-      left: 0;
-      top: 50%;
+      left: 4%;
+      top: 45%;
       transform: translateY(-50%);
       text-align: center;
       mix-blend-mode: difference;
       z-index: 8;
-      @media (max-width: 1440px) {
+      @media only screen and (min-width: 768px) {
         width: 1280px;
-        min-width: 1280px;
+        max-width: 1440px;
         font-size: 4.4rem;
         letter-spacing: 36px;
       }
-      @media (max-width: 1280px) {
-        width: 976px;
-        min-width: 976px;
-        font-size: 3.3 rem;
-        letter-spacing: 24px;
-      }
-      @media (max-width: 600px) {
-        width: 600px;
+      @media only screen and (max-width: 767px) {
+        width: 700px;
         min-width: 600px;
         font-size: 2.2rem;
+        letter-spacing: 24px;
+        left: -5%;
+      }
+      @media only screen and (max-width: 767px) and (orientation: portrait) {
+        width: 450px;
+        min-width: 350px;
+        left: -5%;
+        font-size: 1.1rem;
         letter-spacing: 12px;
       }
     }
@@ -255,14 +267,20 @@ header {
       margin: 0 auto;
       position: relative;
       margin-left: -58px;
-      @media (max-width: 1440px) {
-        width: 1440px;
+      // display: flex;
+      // flex-wrap: wrap;
+      align-items: center;
+      @media only screen and (min-width: 768px) {
+        /* tablets and desktop */
+        max-width: 4223px;
       }
-      @media (max-width: 1280px) {
-        width: 1280px;
+
+      @media only screen and (max-width: 767px) {
+        /* phones */
       }
-      @media (max-width: 600px) {
-        width: 600px;
+
+      @media only screen and (max-width: 767px) and (orientation: portrait) {
+        /* portrait phones */
       }
     }
   }
@@ -369,23 +387,34 @@ header {
   position: relative;
   border-radius: 10px;
   border: solid black;
+  @media only screen and (min-width: 768px) {
+    /* tablets and desktop */
+  }
+
+  @media only screen and (max-width: 767px) {
+    /* phones */
+  }
+
+  @media only screen and (max-width: 767px) and (orientation: portrait) {
+    /* portrait phones */
+  }
   .inner-about {
     display: flex;
     justify-content: space-between;
     align-items: center;
     .content {
       width: 33%;
-      @media (max-width: 1440px) {
-        width: 40%;
+      @media only screen and (min-width: 768px) {
+        width: 33%;
         margin-left: 1rem;
       }
-      @media (max-width: 1280px) {
-        width: 40%;
-        margin-left: 1rem;
+      @media only screen and (max-width: 767px) {
+        width: 33%;
+        margin-left: 2rem;
       }
-      @media (max-width: 976px) {
-        width: 40%;
-        margin-left: 1rem;
+      @media only screen and (max-width: 767px) and (orientation: portrait) {
+        width: 33%;
+        margin-left: 2rem;
       }
       h3 {
         font-weight: 700;
@@ -419,16 +448,16 @@ header {
       // background: pink;
       // top: -365px;
       // right: -600px;
-      @media (max-width: 1440px) {
+      @media only screen and (min-width: 768px) {
         height: 800px;
       }
-      @media (max-width: 1280px) {
-        height: 600px;
+      @media only screen and (max-width: 767px) {
+        // height: 600px;
       }
       @media (max-width: 976px) {
-        height: 400px;
-        right: 200px;
-        top: -255px;
+        // height: 400px;
+        right: 30%;
+        top: 325px;
       }
       .top-right {
         position: absolute;
@@ -436,16 +465,21 @@ header {
         top: 250px;
         right: 17%;
         z-index: 4;
-        @media (max-width: 1440px) {
+
+        @media only screen and (min-width: 768px) {
+          /* tablets and desktop */
           position: absolute;
           width: 500px;
         }
-        @media (max-width: 1280px) {
-          position: absolute;
+
+        @media only screen and (max-width: 767px) {
+          /* phones */
           width: 350px;
           top: 30%;
         }
-        @media (max-width: 976px) {
+
+        @media only screen and (max-width: 767px) and (orientation: portrait) {
+          /* portrait phones */
           position: absolute;
           width: 200px;
         }
@@ -463,19 +497,19 @@ header {
     margin-right: 3rem;
     top: 45%;
     transform: translateY(-50%);
-    @media (max-width: 1440px) {
+    @media only screen and (min-width: 768px) {
       width: 538px;
       height: 330px;
     }
-    @media (max-width: 1280px) {
+    @media only screen and (max-width: 767px) {
       width: 338px;
       height: 230px;
     }
-    @media (max-width: 976px) {
+    @media only screen and (max-width: 767px) and (orientation: portrait) {
       width: 338px;
-      height: 100px;
-      top: 10%;
-      right: -5%;
+      height: 95px;
+      top: 8%;
+      right: 8%;
     }
     &.overlay {
       z-index: 7;
@@ -493,19 +527,19 @@ header {
     margin-right: 3rem;
     top: 59%;
     transform: translateY(-50%);
-    @media (max-width: 1440px) {
+    @media only screen and (min-width: 768px) {
       width: 538px;
       height: 330px;
     }
-    @media (max-width: 1280px) {
+    @media only screen and (max-width: 767px) {
       width: 338px;
       height: 230px;
     }
-    @media (max-width: 976px) {
+    @media only screen and (max-width: 767px) and (orientation: portrait) {
       width: 130px;
       height: 338px;
-      top: 30%;
-      right: -7%;
+      top: 23%;
+      right: -10%;
     }
     &.overlay {
       z-index: 7;
@@ -526,51 +560,54 @@ header {
     align-items: center;
     .services-content {
       width: 100%;
-      @media (max-width: 1440px) {
+      @media only screen and (min-width: 768px) {
         width: 100%;
       }
-      @media (max-width: 1280px) {
+      @media only screen and (max-width: 767px) {
         width: 75%;
         margin-left: 2rem;
       }
-      @media (max-width: 976px) {
+      @media only screen and (max-width: 767px) and (orientation: portrait) {
         width: 50%;
         margin-left: 1rem;
       }
       .my-services {
-        margin-top: 10rem;
+        margin-top: 5rem;
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
-        grid-gap: 2.5rem;
+        grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+        grid-gap: 0.5rem;
         text-align: center;
+        border: 1px red solid;
       }
       .services {
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        padding: 2rem;
+        padding: 1rem;
       }
       h2 {
         font-weight: 700;
         text-transform: uppercase;
         font-size: 2.8rem;
-        letter-spacing: 1.5px;
-        margin: 0;
+        letter-spacing: 2px;
+        margin: 2rem -2px 2rem 0;
         text-align: center;
       }
       h3 {
         font-weight: 700;
+        flex-direction: row;
         text-transform: uppercase;
         font-size: 1.8rem;
         letter-spacing: 1.5px;
-        margin: 0;
+        margin: 2rem -2px 2rem 0;
       }
       p {
         font-size: 1rem;
         line-height: 2rem;
         font-weight: 300;
         margin: 40px 0 72px;
+        text-align: center;
       }
     }
   }

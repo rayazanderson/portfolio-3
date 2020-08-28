@@ -7,8 +7,9 @@ const Banner = () => {
     query {
       leaf: file(relativePath: { eq: "leaf.png" }) {
         childImageSharp {
-          fluid(maxWidth: 1000, quality: 100) {
+          fluid(maxWidth: 5000, quality: 100) {
             ...GatsbyImageSharpFluid
+            ...GatsbyImageSharpFluidLimitPresentationSize
           }
         }
       }
@@ -26,7 +27,13 @@ const Banner = () => {
           <div className="rain-drop"></div>
           <div className="rain-drop"></div>
           <div className="banner-image">
-            <Img fluid={data.leaf.childImageSharp.fluid} alt="" />
+            <Img
+              fluid={data.leaf.childImageSharp.fluid}
+              alt=""
+              objectFit="cover"
+              objectPosition="50% 50%"
+              alt=""
+            />
           </div>
           <div className="rain-drop"></div>
           <div className="rain-drop"></div>
